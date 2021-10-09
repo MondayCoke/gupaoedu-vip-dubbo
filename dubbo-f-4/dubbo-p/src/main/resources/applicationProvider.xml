@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://code.alibabatech.com/schema/dubbo
+        http://code.alibabatech.com/schema/dubbo/dubbo.xsd ">
+
+    <dubbo:application name="dubbo_provider"/>
+    <!-- 其实就是类似于一个全局变量 -->
+    <dubbo:provider timeout="5000"/>
+    <dubbo:registry address="zookeeper://192.168.67.139:2184" check="false"/>
+    <!-- 如果协议是dubbo，这个就是netty服务端绑定的端口  默认：20880 -->
+    <dubbo:protocol name="dubbo" port="29015"/>
+    <bean id="userServiceImpl" class="cn.enjoy.service.UserServiceImpl"/>
+    <dubbo:service interface="cn.enjoy.service.UserService" ref="userServiceImpl" timeout="2000">
+<!--        <dubbo:method name=""/>-->
+    </dubbo:service>
+</beans>
