@@ -1,0 +1,7 @@
+dubbo=cn.enjoy.dubbospi.DubboActivate
+mybatis=cn.enjoy.dubbospi.MybatisActivate
+rabbitmq1=cn.enjoy.dubbospi.Rabbitmq1Activate
+rabbitmq2=cn.enjoy.dubbospi.Rabbitmq2Activate
+rabbitmq=cn.enjoy.dubbospi.RabbitmqActivate
+spring=cn.enjoy.dubbospi.SpringActivate
+springcloud=cn.enjoy.dubbospi.SpringCloudActivate
