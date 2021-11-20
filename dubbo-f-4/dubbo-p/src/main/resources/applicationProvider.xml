@@ -9,7 +9,7 @@
     <dubbo:application name="dubbo_provider"/>
     <!-- 其实就是类似于一个全局变量 -->
     <dubbo:provider timeout="5000"/>
-    <dubbo:registry address="zookeeper://192.168.67.139:2184" check="false"/>
+    <dubbo:registry address="zookeeper://47.107.45.58:2182" check="false"/>
     <!-- 如果协议是dubbo，这个就是netty服务端绑定的端口  默认：20880 -->
     <dubbo:protocol name="dubbo" port="29015"/>
     <bean id="userServiceImpl" class="cn.enjoy.service.UserServiceImpl"/>
